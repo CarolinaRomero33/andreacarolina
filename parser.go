@@ -75,7 +75,7 @@ func (p *Parser) Parse() (*SelectStatement, error) {
 	//Suma global.
 
 	if tok, lit := p.scanIgnoreWhitespace(); tok != var {
-		return nil, fmt.Errorf("encontro %q, esperaba varr", lit)
+		return nil, fmt.Errorf("encontro %q, esperaba var", lit)
 	}
 	if tok, lit := p.scanIgnoreWhitespace(); tok != IDENT {
 		return nil, fmt.Errorf("encontro %q, esperaba variable", lit)
